@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant |  Dominos Pizza</title>
+     <meta data-rh="true" charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"700b8cfba9",applicationID:"147205669"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><meta data-rh="true" name="robots" content="NOODP,NOYDIR"/><meta data-rh="true" name="description" content=" 
+Domino&#x27;s Pizza New Delhi; Domino&#x27;s Pizza, Connaught Place; Get Menu, Reviews, Contact, Location, Phone Number, Maps and more for Domino&#x27;s Pizza Restaurant on Zomato
+"/><meta data-rh="true" name="twitter:card" content="summary"/><meta data-rh="true" property="og:title" content=" 
+Domino&#x27;s Pizza, Connaught Place, New Delhi
+"/><meta data-rh="true" property="og:image" content="/ncr/dominos-pizza-connaught-place-new-delhi"/><meta data-rh="true" property="og:description" content=" 
+Domino&#x27;s Pizza New Delhi; Domino&#x27;s Pizza, Connaught Place; Get Menu, Reviews, Contact, Location, Phone Number, Maps and more for Domino&#x27;s Pizza Restaurant on Zomato
+"/>
+
+<link rel="icon" type="image/png" href=https://b.zmtcdn.com/images/logo/zomato_logo_2017.png
+>
+<style type="text/css">
+  @font-face{font-family:Okra;font-display:swap;src:url(https://b.zmtcdn.com/web_assets/035d1f0cc54a54dbd86dcd359c33dc7e1563289191.woff2) format('woff2'),url(https://b.zmtcdn.com/data/okra-extralight/65ceab44b33a6af9f78389af04be27881562672616.ttf) format('truetype');font-style:normal;font-weight:200}@font-face{font-family:Okra;font-display:swap;src:url(https://b.zmtcdn.com/web_assets/68b68e55482099b96a92394b1ffdc1a91563288973.woff2) format('woff2'),url(https://b.zmtcdn.com/data/okra-light/6691007026aa560ceafc75e2bd2f92581562672634.ttf) format('truetype');font-style:normal;font-weight:300}@font-face{font-family:Okra;font-display:swap;src:url(https://b.zmtcdn.com/web_assets/dc12ecc2eb75e0ba75fc9eee7939fb601563289146.woff2) format('woff2'),url(https://b.zmtcdn.com/data/okra-regular/80f33563c4bc7a4e57422cfa3077297e1562672681.ttf) format('truetype');font-style:normal;font-weight:400}@font-face{font-family:Okra;font-display:swap;src:url(https://b.zmtcdn.com/web_assets/5e9f7b312ce52bfae150cbbd2a946fde1563289123.woff2) format('woff2'),url(https://b.zmtcdn.com/data/okra-medium/9646f8fefe027d010d5be85082cf9c1f1562672657.ttf) format('truetype');font-style:normal;font-weight:500}@font-face{font-family:Okra;font-display:swap;src:url(https://b.zmtcdn.com/web_assets/4bca1340d3e9b7e44c1cd9acb23b3e941563336526.woff2) format('woff2'),url(https://b.zmtcdn.com/data/okra-bold/3df3305730179dd180b8acb555d1b7341562672566.ttf) format('truetype');font-style:normal;font-weight:600}body,html{margin:0;padding:0;font-size:62.5%;font-weight:300;box-sizing:border-box}body,button,input,input::-webkit-input-placeholder{font-family:Okra,Helvetica,sans-serif}body,button,input,input::-moz-placeholder{font-family:Okra,Helvetica,sans-serif}body,button,input,input:-ms-input-placeholder{font-family:Okra,Helvetica,sans-serif}body,button,input,input::placeholder{font-family:Okra,Helvetica,sans-serif}*,:after,:before{box-sizing:inherit;-webkit-tap-highlight-color:transparent}:active,:focus{outline:0}@media (hover:none){:active,:focus{outline:0!important}}@media screen and (prefers-reduced-motion:reduce){*{-webkit-animation-play-state:paused!important;animation-play-state:paused!important;-webkit-transition:none!important;transition:none!important;-webkit-scroll-behavior:auto!important;-moz-scroll-behavior:auto!important;-ms-scroll-behavior:auto!important;scroll-behavior:auto!important}}div,p,span{font-size:1.6rem}
+
+
+
+
+  .neww {
+    background-color:#e84315 ;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 100px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 60%;
+  background: #f1f1f1;
+  display: flex;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  padding-left: 100px;
+  background: rgb(186, 191, 196);
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 1px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.slideshow-container {
+  padding: 100px;
+  padding-left: 500px;
+}
+
+.heas {
+  text-size-adjust: 100px;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+body {
+  background-color:#d9dbd9 ;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 100px;
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  
+  
+  text-align: center;
+  padding-bottom: 50px;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.aww {
+  margin-top: 100px;
+  text-align: left;
+  padding-left: 100px;
+}
+
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+  padding-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+  padding-left: 50px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 60%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: left;
+  padding-right: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 50%;
+  background-color: grey;
+  text-align: center;
+  color: black;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 50%;
+  }
+  .right {
+    display: none;
+  }
+}
+</style>
+<script src="https://apis.google.com/js/platform.js?onload=onGoogleAPILoaded" async defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async defer></script>
+<script>
+  var publicPath = 'https://zwstatic.zomato.com/';
+</script>
+</head>
+<body>
+    <div class="neww">
+        <h2><i>zomato</i></h2>
+        
+<form class="example" action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+    </div>
+    
+
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="aw5.jpg" style="width:50%">
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="aw6.jpg" style="width:30%">
+    
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="aw8.jpg" style="width:35%">
+    
+    </div>
+    <div class="heas">
+      <h1>Dominos Pizza</h1>
+     
+      <p>
+        Quick Bites - Pizza, Fast Food <br>
+        Connaught Place <br>
+        ClosedOpens at 10:57am
+
+      </p>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+     
+    
+    
+<div class="flex-container">
+  <div>Add Review</div>
+  <div>Direction</div>
+  <div>Bookmark</div>  
+  <div>Share</div>
+
+</div>
+<div class="heas">
+  <div class="aww">
+    <h2>
+      Top Dishes People Order
+    </h2>
+    <p>
+      Peppy Paneer, Paneer Pizza, Chocolava Cake, Veg Extravaganza Pizza, Pasta, Stuffed Garlic Bread, Chicken Pizza
+    </p>
+    <br>
+    <br>
+    <h2>
+      People Liked
+    </h2>
+    <p>
+      Prompt Service
+    </p>
+    <br>
+    <br>
+    <h2>
+      Average Cost
+    </h2>
+    <p>
+      Rs. 400 for two people (approx.)
+    </p>
+    <br>
+    <br>
+    <p>
+      Cash and Cards accepted Digital payments accepted
+    </p>
+
+
+
+  </div>
+  
+</div>
+
+
+<span class="heading">User Rating
+
+
+</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p class="heading">
+  4.1 average based on 254 reviews.
+
+</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
